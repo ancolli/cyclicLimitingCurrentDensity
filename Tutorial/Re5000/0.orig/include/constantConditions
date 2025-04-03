@@ -1,0 +1,57 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      initialConditions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Turbulence parameters
+turbulentk             10e-04;
+turbulentOmega         100;
+turbulentEpsilon       4.80e-15;
+turbulentNut           0;//0.01;
+turbulentNuTilda       6.72e-05;
+
+simulation_type        RAS;//laminar;//
+flowModel              kOmegaSST;//laminar;//
+flowNu                 1e-6;
+//flowMu                 0.0007191256190711382;
+
+// pressure and velocity
+flowVelocity               (0.5 0.0 0.0);//(3.6172e-05 0.0 0.0);
+staticPressure     0;
+flowPressure       0;
+
+// Temperatures
+cmax              1996.71;
+Tmax		  297.15;
+
+
+// Cyclic constraint
+flowUbar          $flowVelocity;//(0.0025 0.0 0.0);
+
+
+Sc		    2000;
+Sct		    0.5;
+Pr           	    5;
+Prt                 0.85;
+
+lambdaGuess         0.05;//0.5387;
+domainLength        50e-3;//1.0;
+		    
+
+lambdaDelay         100;//100;
+
+
+
+
+// ************************************************************************* //

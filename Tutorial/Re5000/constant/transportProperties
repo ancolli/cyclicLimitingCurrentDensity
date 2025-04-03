@@ -1,0 +1,71 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "../0/include/initialConditions"
+
+transportModel Newtonian;
+
+// Laminar viscosity
+nu              $flowNu;
+
+kf		12.9; // S/m == A/V/m == A^2s^3/kg/m^3  // dimensions [-1 -3 3 0 0 2 0]
+
+F		F [0 0 1 0 -1 1 0] 96485; //Cb/mol 
+
+// State which method to use
+method          $method;
+
+// Thermal expansion coefficient
+//gamma            $thermalGamma;
+
+// Thermal expansion coefficient
+//beta            $thermalBeta;
+
+// Reference temperature
+//TRef            $bulkTemp;
+
+// Laminar Prandtl number
+Sc              $Sc;
+
+// Turbulent Prandtl number
+Sct             $Sct;
+
+// Laminar Prandtl number
+Pr              $Pr;
+
+// Turbulent Prandtl number
+Prt             $Prt;
+
+// Characteristic Length
+Lc              $domainLength;
+
+// Wall Temperature
+cmax           $cmax;
+
+Tmax	       $Tmax;
+
+// lambda Guess
+lambda0           $lambdaGuess;
+
+// Average velocity in flow direction
+flowVel         $flowVelocity;
+
+// Average velocity in flow direction
+delay            $lambdaDelay;
+
+// Average velocity in flow direction
+//interval            $lambdaInterval;
+// ************************************************************************* //

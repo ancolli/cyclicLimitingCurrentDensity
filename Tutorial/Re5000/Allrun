@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+solver=cyclicPotentialConcentrationSimpleFoam
+
+foamCleanTutorials
+
+blockMesh > log.blockMesh 2>&1
+
+rm -rf 0
+cp -rf 0.orig 0
+
+
+
+$solver | tee log.cyclicPotentialConcentrationSimpleFoam
+
+postProcess -func partialCurrentDensity -latestTime
+
+
