@@ -1,6 +1,6 @@
 # v1.0.0
 
-Cite as:
+Cite as: Rational design of turbulence promoters in electrochemical reactors using numerical simulations of periodic sections. International Communications in Heat and Mass Transfer
 
 DOI: 
 
