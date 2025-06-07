@@ -2,7 +2,7 @@
 
 Cite as: A.N. Colli and J.M. Bisang. Rational design of turbulence promoters in electrochemical reactors using numerical simulations of periodic sections. International Communications in Heat and Mass Transfer 166 (2025) 109120
 
-DOI: 10.1016/j.icheatmasstransfer.2025.109120
+DOI: [10.1016/j.icheatmasstransfer.2025.109120](https://doi.org/10.1016/j.icheatmasstransfer.2025.109120)
 
 Algorithm for predicting mass transfer in electrochemical reactors with periodic sections under limiting current conditions, considering fully developed incompressible flow in both laminar and turbulent regimes. 
 
